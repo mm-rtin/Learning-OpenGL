@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{518A20D7-5255-488A-83C7-F4C128A61BED}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My470A1</RootNamespace>
+    <ProjectName>470A3</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)include\Imath;$(SolutionDir)include\Iex;$(SolutionDir)include;$(SolutionDir)source;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SolutionDir)source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include\Imath;$(SolutionDir)include\Iex;$(SolutionDir)include;$(SolutionDir)source;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SolutionDir)source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\game\ControlScreen.cpp" />
+    <ClCompile Include="..\source\game\GameEngine.cpp" />
+    <ClCompile Include="..\source\game\GameObject.cpp" />
+    <ClCompile Include="..\source\game\GameScreen.cpp" />
+    <ClCompile Include="..\source\game\Obstacle.cpp" />
+    <ClCompile Include="..\source\graphics\ModelObject.cpp" />
+    <ClCompile Include="..\source\graphics\PrimitiveModel.cpp" />
+    <ClCompile Include="..\source\graphics\Primitives.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\system\Animation.cpp" />
+    <ClCompile Include="..\source\system\Bitmap.c" />
+    <ClCompile Include="..\source\system\Clock.cpp" />
+    <ClCompile Include="..\source\system\EventManager.cpp" />
+    <ClCompile Include="..\source\system\Math3d.cpp" />
+    <ClCompile Include="..\source\system\ModelLoader.cpp" />
+    <ClCompile Include="..\source\system\Quaternion.cpp" />
+    <ClCompile Include="..\source\system\ResourceManager.cpp" />
+    <ClCompile Include="..\source\system\Screen.cpp" />
+    <ClCompile Include="..\source\system\ScreenManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\game\ControlScreen.hpp" />
+    <ClInclude Include="..\source\game\GameEngine.hpp" />
+    <ClInclude Include="..\source\game\GameObject.hpp" />
+    <ClInclude Include="..\source\game\GameScreen.hpp" />
+    <ClInclude Include="..\source\game\Obstacle.hpp" />
+    <ClInclude Include="..\source\graphics\ModelObject.hpp" />
+    <ClInclude Include="..\source\graphics\PrimitiveModel.hpp" />
+    <ClInclude Include="..\source\graphics\Primitives.hpp" />
+    <ClInclude Include="..\source\system\AABBTree.hpp" />
+    <ClInclude Include="..\source\system\Animation.hpp" />
+    <ClInclude Include="..\source\system\Bitmap.h" />
+    <ClInclude Include="..\source\system\Clock.hpp" />
+    <ClInclude Include="..\source\system\Event.hpp" />
+    <ClInclude Include="..\source\system\EventManager.hpp" />
+    <ClInclude Include="..\source\system\GameEvent.hpp" />
+    <ClInclude Include="..\source\system\Globals.hpp" />
+    <ClInclude Include="..\source\system\Material.h" />
+    <ClInclude Include="..\source\system\Math3d.hpp" />
+    <ClInclude Include="..\source\system\Mesh.hpp" />
+    <ClInclude Include="..\source\system\ModelLoader.hpp" />
+    <ClInclude Include="..\source\system\Quaternion.h" />
+    <ClInclude Include="..\source\system\ResourceManager.hpp" />
+    <ClInclude Include="..\source\system\Screen.hpp" />
+    <ClInclude Include="..\source\system\ScreenManager.hpp" />
+    <ClInclude Include="..\source\system\Typedefs.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

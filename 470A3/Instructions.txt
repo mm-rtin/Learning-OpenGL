@@ -1,0 +1,88 @@
+Michael Martin
+
+Keyboard Keys:
+
+	Middle Mouse Button - Open GLUT Menu
+
+	W - Accelerate
+	S - Brake
+	A - Turn car left
+	D - Turn car right
+
+
+	OPTION - FLY -
+
+		Car is allowed to fly in any direction the mouse moves. Car will orient itself correctly to direction.
+		Mouse is hidden and stuck to center of screen. To Reactive Drive mode and show mouse - Middle Mouse Click
+		and select Drive
+
+	OPTION - DRIVE - 
+		
+		Car drives as normal
+
+
+	BBBox Tree -
+
+		View Node Depts 0, 2, 4, 8
+		View Leaf Nodes - View all nodes which will cause a collision
+
+	SPLINE -
+
+		MOVE CAR - player car moves along spline and orients itself to spline normal
+		STOP CAR - player controls car movement as normal
+
+
+	OVERVIEW (Viewing Mode) -
+
+		HOLD LEFT MOUSE Button while moving mouse LEFT/RIGHT to orbit camera
+		around the y-axis. Move mouse UP/DOWN to increase/decrease camera 
+		location along the y-axis (height)
+
+		HOLD RIGHT MOUSE Button while moving mouse UP/DOWN to zoom in/out
+		on the center of the scene
+
+		MOUSE WHEEL - Move Camera closer or further away from look at point.	
+		Z,X Keys zoom the camera out/in
+
+		LIGHT SOURCE (Navigation Mode) -
+
+			Arrow Keys (UP, DOWN, LEFT, RIGHT) move the light source
+			in a 360 degree orgit around the scene
+			
+			W,S,A,D Keys Orbit the camera around the y-axis and control
+			the camera height along the y-axis
+			
+
+		CAMERA (Navigation Mode) -
+
+			Arrow Keys (UP, DOWN, LEFT, RIGHT) Orbit the camera around 
+			the y-axis and control the camera height along the y-axis
+
+
+
+	IN FIRST PERSON (view mode) - Sets View to the perspective of a driver.			
+
+		W,S,A,D Keys accelerate/break and turn left/right
+		Z,X Keys move the car along the y-axis (height in the scene)
+		MOUSE WHEEL - Move Camera closer or further away from look at point
+
+		
+		LIGHT SOURCE (Navigation Mode) -
+			
+			Arrow Keys (UP, DOWN, LEFT, RIGHT) move the light source
+			in a 360 degree orgit around the scene
+
+		CAMERA (Navigation Mode) - 
+			
+			Arrow Keys stick camera and turn view around
+			
+	
+	Design Notes:
+
+		
+
+	3rd Party Libraries:
+		
+		I used a header class (Event.hpp) from SFML (http://www.sfml-dev.org/) in order to convert
+		the GLUT input events into something more friendly.
+		
