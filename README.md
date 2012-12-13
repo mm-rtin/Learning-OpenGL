@@ -1,4 +1,4 @@
 Learning-OpenGL
 ===============
 
-Project for Learning OpenGL and computer graphics
+OpenGL and computer graphics
